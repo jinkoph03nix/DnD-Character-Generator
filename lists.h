@@ -1,4 +1,4 @@
-eob#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <vector>
 using namespace std;
@@ -12,7 +12,7 @@ string races[9] = {"Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "
 string classes[12] = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"}; //classes
 
 //ALIGNMENT
-string alignments[9] = {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neobeseutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"};
+string alignments[9] = {"Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"};
 
 //BACKGROUNDS
 string backgrounds[13] = {"Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Sailor", "Hermit", "Noble", "Outlander", "Sage", "Soldier", "Urchin"};
