@@ -270,6 +270,7 @@ using namespace std;
     int acBonus = 0;
     //Class Features and Proficiencies and Equipment
     for (int i = 0; i < charList.size(); i++){
+      acBonus = 0;
       if (charList[i].cClass == "Barbarian"){
         for (int j = 0; j < sizeof(barbarian_features)/sizeof(barbarian_features[0]); j++){
           charList[i].features.push_back(barbarian_features[j]);
@@ -598,6 +599,7 @@ using namespace std;
         }
         for (int j = 0; j < sizeof(sorcerer_profs)/sizeof(sorcerer_profs[0]); j++){
           charList[i].prof.push_back(sorcerer_profs[j]);
+          }
           //Light cross + 20 bolts vs simple weapon
           random = rand() % 2 + 1;
           if (random == 1){
@@ -622,7 +624,7 @@ using namespace std;
           }
           //2 Daggers
           charList[i].equip.push_back("x2 Daggers");
-        }
+        
       } else if (charList[i].cClass == "Warlock"){
         for (int j = 0; j < sizeof(warlock_features)/sizeof(warlock_features[0]); j++){
           charList[i].features.push_back(warlock_features[j]);
@@ -688,11 +690,10 @@ using namespace std;
           }
         charList[i].equip.push_back("x1 Spellbook");
       } 
-    }
   
     //AC: 10+Dex+Class Bonus+Shield Bonus+(Armor bonus-10)
-    for (int i = 0; i < charList.size(); i++){
       int dexMod = 0;
+      dexMod = 0;
       if (charList[i].dex == 1){
         dexMod -= 5;
       } else if (charList[i].dex == 2 || charList[i].dex == 3){
@@ -1534,31 +1535,31 @@ using namespace std;
         charList[i].lifeEvents.push_back(life_events[random]);
       } else if (charList[i].age <= 30 && charList[i].age > 20){
         randAmnt = rand() % 4 + 1;
-        for (int j = 0; j < random; j++){
+        for (int j = 0; j < randAmnt; j++){
           random = rand() % 46;
           charList[i].lifeEvents.push_back(life_events[random]);
         }
       } else if (charList[i].age <= 40 && charList[i].age > 30){
         randAmnt = rand() % 6 + 1;
-        for (int j = 0; j < random; j++){
+        for (int j = 0; j < randAmnt; j++){
           random = rand() % 46;
           charList[i].lifeEvents.push_back(life_events[random]);
         }
       } else if (charList[i].age <= 50 && charList[i].age > 40){
         randAmnt = rand() % 8 + 1;
-        for (int j = 0; j < random; j++){
+        for (int j = 0; j < randAmnt; j++){
           random = rand() % 46;
           charList[i].lifeEvents.push_back(life_events[random]);
         }
       } else if (charList[i].age <= 60 && charList[i].age > 50){
         randAmnt = rand() % 10 + 1;
-        for (int j = 0; j < random; j++){
+        for (int j = 0; j < randAmnt; j++){
           random = rand() % 46;
           charList[i].lifeEvents.push_back(life_events[random]);
         }
       } else if (charList[i].age > 60){
         randAmnt = rand() % 12 + 1;
-        for (int j = 0; j < random; j++){
+        for (int j = 0; j < randAmnt; j++){
           random = rand() % 46;
           charList[i].lifeEvents.push_back(life_events[random]);
         }
